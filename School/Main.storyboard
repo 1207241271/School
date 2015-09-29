@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eLR-U4-881">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="i8P-41-vkX">
+            <objects>
+                <navigationController storyboardIdentifier="navigation" id="eLR-U4-881" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3ha-X0-zlG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uKf-jc-SRk" kind="relationship" relationship="rootViewController" id="WsP-4B-26g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRK-S2-HBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-442" y="240"/>
+        </scene>
+        <!--大-->
+        <scene sceneID="gaz-kx-153">
+            <objects>
+                <viewController storyboardIdentifier="MainView" id="uKf-jc-SRk" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IVE-Yt-bUS"/>
+                        <viewControllerLayoutGuide type="bottom" id="oIR-XM-D0P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="njI-df-9Bq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AHe-M8-EBJ">
+                                <rect key="frame" x="0.0" y="57" width="320" height="527"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="mainE" translatesAutoresizingMaskIntoConstraints="NO" id="ZLF-WY-CBv">
+                                        <rect key="frame" x="8" y="57" width="320" height="140"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMn-gi-amO">
+                                                <rect key="frame" x="149" y="64" width="46" height="30"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="isY-AQ-89y" kind="push" id="t3I-As-1ff"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.46433354505403268" green="0.5916419789965669" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="大" id="ML7-jr-jwR"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="scrollView" destination="AHe-M8-EBJ" id="8zk-2r-9Ln"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="req-Uq-C2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12" y="247"/>
+        </scene>
+        <!--警报-->
+        <scene sceneID="EwZ-7J-HJp">
+            <objects>
+                <viewController storyboardIdentifier="alertE" id="fPN-Zd-qiD" customClass="AlertViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8QF-4O-Amv"/>
+                        <viewControllerLayoutGuide type="bottom" id="rp3-S9-T7j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q9v-pg-nRf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="警报" id="4p4-Ii-6Vp">
+                        <barButtonItem key="rightBarButtonItem" title="设置警报" id="gnv-ZP-onP"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r86-ph-t9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="397" y="776"/>
+        </scene>
+        <!--电费-->
+        <scene sceneID="5e4-uB-n39">
+            <objects>
+                <viewController storyboardIdentifier="showE" id="isY-AQ-89y" customClass="ElecticViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gky-h9-ILW"/>
+                        <viewControllerLayoutGuide type="bottom" id="hUH-fg-Ohs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WNN-jp-wQS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKl-eg-Re6">
+                                <rect key="frame" x="252" y="88" width="30" height="30"/>
+                                <state key="normal" title="警报">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fPN-Zd-qiD" kind="push" id="PPF-jX-3lz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="yno-BF-Nj9"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="电费" id="z9e-KV-LIk">
+                        <barButtonItem key="rightBarButtonItem" title="设置寝室" id="ypU-Hj-ScI">
+                            <connections>
+                                <segue destination="Ybb-CP-7J9" kind="push" id="h5n-Do-qK9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0yq-Om-cAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="397" y="247"/>
+        </scene>
+        <!--寝室-->
+        <scene sceneID="KTT-9g-Cw5">
+            <objects>
+                <viewController storyboardIdentifier="changeRoom" id="Ybb-CP-7J9" customClass="ChangRoomController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dIy-NE-gBQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="QUG-Xe-Did"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0eU-FM-MgE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="寝室" id="YN1-Ty-Lx8"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4nd-xv-gZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="826" y="247"/>
+        </scene>
+    </scenes>
+</document>

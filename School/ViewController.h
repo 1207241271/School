@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Information.h"
+
 
 @interface ViewController : UIViewController
-
+@property(nonatomic, strong) Information* studentInfo;
 
 @end
 

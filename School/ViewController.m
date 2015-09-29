@@ -7,21 +7,25 @@
 //
 
 #import "ViewController.h"
+#import "ElecticViewController.h"
+
 
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
 @implementation ViewController
-
-- (void)viewDidLoad {
+-(void)viewDidLoad{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
+    [self.scrollView setContentSize:CGSizeMake(320, 600)];
+    _studentInfo=[[Information alloc]initWithData];
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue destinationViewController]isKindOfClass:[ElecticViewController class]]) {
+        
+    }
 }
 
 @end
